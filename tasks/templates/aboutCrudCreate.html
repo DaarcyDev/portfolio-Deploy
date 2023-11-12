@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+  <body class="bodyAdmin">
+    <div class="terminalContent about">
+      <div class="comandLine">
+        <h3 class="user">
+          User@DaarcyWebsite:<span class="simbols">~$</span><span class="comand animationComand">sudo cat crudAbout.txt</span>
+        </h3>
+      </div>
+      <div class="text animationText">
+        <div class="options">
+          <a class="button-24" href="{% url 'crudAbout' %}">volver</a>
+          <h2>Crud</h2>
+          <form method="post" enctype="multipart/form-data" class="formAbout">
+            {% csrf_token %}
+            {{ formAbout.aboutResume.label_tag }}
+            {{ formAbout.aboutResume }}
+            {{ formAbout.aboutComplete.label_tag }}
+            {{ formAbout.aboutComplete }}
+            {{ formAbout.aboutImages.label_tag }}
+            {{ formAbout.aboutImages }}
+            
+            <button class="button-24" type="submit">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock content %}
