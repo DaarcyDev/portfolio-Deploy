@@ -9,8 +9,8 @@ class About(models.Model):
         return self.aboutResume
     
 class Project(models.Model):
-    projectResume = models.TextField()
-    projectComplete = models.TextField()
+    projectResume = models.TextField(blank=True)
+    projectComplete = models.TextField(blank=True)
     projectName = models.CharField(max_length=500, blank=True)
     projectImage = models.ImageField(upload_to='project_images/')
     projectWebsiteResume = models.TextField()

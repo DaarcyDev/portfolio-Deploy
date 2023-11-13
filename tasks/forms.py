@@ -59,6 +59,8 @@ class BlogFileForm(forms.ModelForm):
     class Meta:
         model = BlogFile
         fields = ['file', 'fileContent']
+        
+# BlogFileFormSet = inlineformset_factory(BlogCategory, BlogFile, form=BlogFileForm, extra=1)
 
 class ContactForm(forms.ModelForm):
     class Meta:

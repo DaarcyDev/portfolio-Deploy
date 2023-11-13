@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 {% block content %}
   <body class="bodyAdmin">
@@ -18,8 +18,8 @@
             {% csrf_token %}
             <div class="formContent">
               <div class="textArea">
-                {{ skillForm.skillResume.label_tag }}
-                {{ skillForm.skillResume }}
+                {{ skillForm.skillsResume.label_tag }}
+                {{ skillForm.skillsResume }}
                 {{ skillForm.skillComplete.label_tag }}
                 {{ skillForm.skillComplete }}
                 {{ skillForm.programingLanguageResume.label_tag }}
